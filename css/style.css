@@ -28,12 +28,12 @@ body {
 }
 
 #index {
-	background: url("../img/index.PNG") fixed;
+	background: url("../img/index.png") fixed;
 	background-position: center;
   	background-repeat: no-repeat;
   	background-size: cover;
 
-	cursor: url("../img/cursor.png"),none;
+	cursor: url("../img/cursor.PNG"),none;
 }
 
 #indexcontainer{
