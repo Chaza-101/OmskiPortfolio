@@ -28,7 +28,7 @@ body {
 }
 
 #index {
-	background: url("../img/index.png") fixed;
+	background: url("../img/index.PNG") fixed;
 	background-position: center;
   	background-repeat: no-repeat;
   	background-size: cover;
