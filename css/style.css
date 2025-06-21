@@ -1,0 +1,317 @@
+/* Basic CSS resets -- leveling slight inconsistencies in browsers */
+html, body {
+	margin:0px;
+	padding:0px;
+	height:100%;
+}
+
+html {
+		/* Standard text-settings below */
+	font-size: 1em;
+    line-height: 1.4em;
+}
+
+
+
+
+/* Mobile First CSS: we'll design for phone sizes first, then add media queries for tablets and desktop computers later */
+
+body {
+	background: url("../img/truebackground.png") fixed;
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+
+
+	cursor: url("../img/cursor.png"),none;
+
+}
+
+#index {
+	background: url("../img/index.png") fixed;
+	background-position: center;
+  	background-repeat: no-repeat;
+  	background-size: cover;
+
+	cursor: url("../img/cursor.png"),none;
+}
+
+#indexcontainer{
+	position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#indexcontainer div{
+	text-align: center;
+}
+
+button{
+	list-style: none;
+	text-decoration: none;	
+	text-align: center;
+	background: rgb(84, 17, 17);
+	padding: 8px;
+	margin: 16px;
+}
+
+
+button a{
+	text-decoration: none;
+	color: #c1af90;
+	font-family: "Syne Mono", monospace;
+	padding: 8px;
+	border-radius: 4px;	
+}
+
+
+button:hover{
+	color: #f9e7c9;
+	background: rgb(119, 6, 6);
+	
+}
+
+a{
+	cursor: url("../img/cursorhover.png"),none;
+}
+
+
+
+/* NAVIGATION INFO */
+nav{
+	background: url("../img/background.png");
+	
+		background-attachment: fixed; 
+		background-position:center;
+		padding: 4px;
+}
+
+footer{
+	margin-top: 5vw;
+
+	background: url("../img/background.png"); 
+		background-attachment: fixed; 
+		background-position:center;
+		padding: 4px;
+}
+
+footer p{
+	color: #cfc0a5;
+	padding-right: 16px;
+	text-align: right;
+}
+
+footer p a{
+	color: #cabda4;	
+	text-align: right;
+}
+
+
+li{
+	list-style: none;
+	text-decoration: none;	
+	text-align: center;
+}
+li a{
+	text-decoration: none;
+	color: #c1af90;
+	font-family: "Syne Mono", monospace;
+	background: rgb(84, 17, 17);
+	padding: 8px;
+	border-radius: 4px;
+}
+li a:hover{
+	color: #f9e7c9;
+	background: rgb(119, 6, 6);
+}
+/* NAVIAGTION INFO END*/
+
+
+
+
+#container {
+	width:90%;
+	margin:auto;
+	padding-top: 10px;
+}
+
+/* IMAGE INFO */
+figure {
+	margin:0px;
+}
+
+figure img {
+	width:100%;
+}
+/* IMAGE INFO END*/
+
+
+/* DISPLAY FLEX */
+#about{
+	display: flex;
+	text-align: justify;
+	align-items: center;
+	flex-direction: column;
+	gap: 16px;
+
+}
+
+#about div{
+	order: 1;
+}
+
+#about figure, #about div{
+	  flex-basis: 100%;
+}
+/* DISPLAY FLEX END */
+
+
+/* TEXT INFO */
+h1{
+	text-align: center;
+}
+
+h3{
+	text-align: right;
+}
+
+h1, h2, h3, p, main a, figcaption{
+	color: #200703;
+	font-family: "Syne Mono", monospace;
+}
+/* TEXT INFO END*/
+
+
+
+
+/* Class for making YouTube/Vimeo videos responsive */
+
+figure.responsive {
+    position: relative;
+    padding-bottom: 56.25%;  /* 16:9 */
+    height: 0px;
+    overflow: hidden;
+    max-width: 100%;
+}
+
+figure.responsive iframe {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+/* A better looking default horizontal rule */
+hr {
+    display: block;
+    height: 1px;
+    border: 0px;
+    border-top: 1px solid #ccc;
+    margin: 1em 0px;
+    padding: 0px;
+}
+
+
+
+/* ========================================
+MEDIA QUERIES!
+You can adjust the min-width numbers below, and add as many new media queries as you need.
+======================================== */
+
+/* Minimum width for portrait tablets and large phone screens.  */
+@media all and (min-width: 600px) {
+	
+	
+	
+	
+} /* closes 600px+ */
+
+
+
+/* Minimum width for landscape laptops. */
+@media all and (min-width: 768px) {
+	
+	#container {
+	width:60%;
+	margin:auto;
+	padding-top: 40px;	
+}
+
+	nav{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+
+	
+	}
+	nav section{
+		flex:0 1 48%;
+	}
+
+	p, main a{
+		font-size: 1.6vw;
+
+	}
+	h1{
+		font-size: 2.5vw;
+	}
+	h2, h3{
+		font-size: 2vw;
+	}
+	li a{
+		font-size: 1.6vw;
+	}
+
+
+} /* closes 768px+ */
+
+
+
+/* Minimum width for larger tablets, laptops and desktops. */
+@media all and (min-width: 992px) {
+	li a, button a{
+		font-size: 1vw;
+	}
+
+	p, main a{
+		font-size: 1.2vw;
+
+	}
+
+	#about{ 
+		flex-direction: row;
+	}
+
+	#about div{
+	order: 0;
+}
+
+	#fig{
+		text-align: right;
+	}
+} /* closes 992px+ */
+
+
+
+/* Minimum width for larger desktops. */
+@media all and (min-width: 1200px) {
+	#container {
+	width:60%
+	max-width: 1500px;
+	margin:auto;
+	padding-top: 40px;	
+}
+	nav{
+		padding: 1.2vw;
+	}
+	
+	
+} /* closes 1200px+ */
+
+
+
+
